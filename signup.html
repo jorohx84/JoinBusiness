@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="CSS/sidebar-header.css">
+    <link rel="icon" type="image/x-icon" href="assets/icon/favicon.svg">
+    <link rel="stylesheet" href="CSS/board.css">
+    <link rel="stylesheet" href="CSS/contacts.css">
+    <link rel="stylesheet" href="CSS/task.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/signup.css">
+    <script src="JS/data.js"></script>
+    <script src="JS/signup.js"></script>
+    <script src="JS/template.js"></script>
+    <script src="JS/tasktemplate.js"></script>
+    <script src="JS/subtask-template.js"></script>
+    <script src="JS/contacts.js"></script>
+    <script src="JS/login.js"></script>
+    <script src="JS/dom_manipulations.js"></script>
+
+
+</head>
+
+<body onload="signUpInit()" class="task-body">
+
+
+    <section class="main-content-signup">
+
+        <img class="join-logo-signup" id="" src="./assets/img/join-logo-black.svg" alt="">
+        <div class="signup-content">
+            <a class="arrow-back" href="index.html"><img src="./assets/icon/arrow-left-line.svg" alt=""></a>
+            <div class="signup-headline">
+                <h1>Sign up</h1>
+                <div class="middline-login"></div>
+            </div>
+
+            <div class="signup-field">
+
+                <div>
+                    <div class="login-input-container">
+                        <input class="required" type="text" name="name" id="signup-name" placeholder="Name">
+                        <img class="login-img" src="./assets/icon/persongrey.svg" alt="">
+                    </div>
+                    <div class="errortext" id="name"></div>
+                </div>
+
+                <div>
+                    <div class="login-input-container">
+                        <input class="required" type="email" name="email" id="signup-email" placeholder="Email">
+                        <img class="login-img" src="./assets/icon/mail.svg" alt="">
+                    </div>
+                    <div class="errortext" id="email"></div>
+                </div>
+
+                <div>
+                    <div class="login-input-container">
+                        <input class="required" onkeydown="showVasibilitiyOff('signup')" type="password" name="password"
+                            id="signup-password" placeholder="Password">
+                        <img class="login-img" id="signup-lock" src="./assets/icon/lock.svg" alt="">
+                        <div class="login-button d_none" id="signup-visibility">
+                            <button onclick="togglePassword('signup-password', 'signup')"><img
+                                    src="./assets/icon/visibility.svg" alt=""></button>
+                        </div>
+                        <div class="login-button d_none" id="signup-visibility_off" class="d_none">
+                            <button onclick="togglePassword('signup-password', 'signup')"><img
+                                    src="./assets/icon/visibility_off.svg" alt=""></button>
+                        </div>
+
+                    </div>
+                    <div class="errortext" id="password"></div>
+
+                </div>
+
+                <div>
+                    <div class="login-input-container">
+                        <input class="required" onkeydown="showVasibilitiyOff('confirm')" type="password" name="confirm"
+                            id="confirm-password" placeholder="Confirm Password">
+                        <img class="login-img" id="confirm-lock" src="./assets/icon/lock.svg" alt="">
+                        <div class="login-button d_none" id="confirm-visibility">
+                            <button onclick="togglePassword('confirm-password', 'confirm')"><img
+                                    src="./assets/icon/visibility.svg" alt=""></button>
+                        </div>
+                        <div class="login-button d_none" id="confirm-visibility_off" class="d_none">
+                            <button onclick="togglePassword('confirm-password', 'confirm')"><img
+                                    src="./assets/icon/visibility_off.svg" alt=""></button>
+                        </div>
+
+                    </div>
+                    <div class="errortext" id="confirm"></div>
+                    <div class="errortext" id="typemessage"></div>
+                </div>
+
+                <div class="accept-privacy">
+                    <div onclick="changePrivacyCheckbox()" id="default-privacy">
+                        <button><img src="./assets/icon/default.svg" alt=""></button>
+                    </div>
+                    <div class="d_none" id="checked-privacy">
+                        <button onclick="changePrivacyCheckbox()"><img src="./assets/icon/checked.svg" alt=""></button>
+                    </div>
+
+                    <p>I accept the <a href="#">Private Policy</a></p>
+                </div>
+                <div class="errortext" id="accept-privacy-error"></div>
+
+                <div class="signupbutton">
+                    <button onclick="validateInputFields('signup')" class="btn-dark login-btn-left"
+                        onclick="checkUser()">Sign Up</button>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        
+
+
+
+        <div class="footer">
+            <div class="footer-content">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="legal.html">Legal Notice</a>
+            </div>
+        </div>
+
+
+
+
+
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <script>w3.includeHTML();</script>
+    </section>
+<div class="signup-slider signup-slidin" id="signup-slider">
+    <p>You Signed Up successfully</p>
+</div>
+
+</body>
+
+</html>

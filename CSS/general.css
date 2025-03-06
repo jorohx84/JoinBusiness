@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+   
+    transition: all 125ms;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Für horizontalen Scrollbalken: height: 0px */
+    height: 0px;
+    background: transparent;  /* Hintergrund transparent machen */
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--body-color);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 61px;
+    font-weight: 700;
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+}
+input {
+    width: 422px;
+    height: 48px;
+    padding: 12px 21px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 20px;
+    box-sizing: border-box;
+}
+input::placeholder {
+    color: var(--border);
+}
+input:focus {
+    outline: none;
+    border: 1px solid var(--highlight);
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    border-radius: 8px;
+    padding: 15px 24px;
+    border: 1px solid var(--main-color);
+    font-size: 21px;
+    font-weight: 700;
+    transition: transform 100ms ease-in-out;
+    cursor: pointer;
+}
+button:hover {
+    transform: scale(1.05);
+}
+.btn-dark {
+    color: var(--white);
+    background-color: var(--main-color);
+}
+.btn-dark:hover {
+    border: 1px;
+    background-color: var(--highlight);
+    box-shadow: 0px 4px 4px 0px var(--box-shadow-darker);
+}
+.btn-light {
+    color: var(--main-color);
+    background-color: var(--white);
+}
+.btn-light:hover {
+    color: var(--highlight);
+    border: 2px solid var(--highlight);
+    box-shadow: 0px 4px 4px 0px var(--box-shadow-darker);
+    
+}
+
+.btn-light:hover svg path {
+
+    stroke: #29ABE2;
+}
+
+.fnt-light{
+
+    font-weight: 200;
+}
+
+
+
+:root {
+    --main-color: #2A3647;
+    --secondary-color: #4589FF;
+    --side-bar-text: #CDCDCD;
+    --side-bar-hover:#2a3d59;
+    --side-bar-active:#091931;
+    --avatar-hover: #0C2E621F;
+    --footer-text: #A8A8A8;
+    --highlight: #29ABE2;
+    --body-color: #f6f7f8;
+    --white: #fff;
+    --box-shadow: #0000000A;
+    --box-shadow-darker: #00000040;
+    --border: #D1D1D1;
+    --checkbox-hover: #EDF2FA;
+}
+

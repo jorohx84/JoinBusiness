@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="CSS/sidebar-header.css">
+    <link rel="icon" type="image/x-icon" href="assets/icon/favicon.svg">
+    <link rel="stylesheet" href="CSS/board.css">
+    <link rel="stylesheet" href="CSS/contacts.css">
+    <link rel="stylesheet" href="CSS/task.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/signup.css">
+    <script src="JS/data.js"></script>
+    <script src="JS/template.js"></script>
+    <script src="JS/tasktemplate.js"></script>
+    <script src="JS/subtask-template.js"></script>
+    <script src="JS/login.js"></script>
+    <script src="JS/dom_manipulations.js"></script>
+    <script src="JS/signup.js"></script>
+
+
+</head>
+
+<body onload="loginInit()" class="login-body">
+
+
+    <section class="main-content-login">
+
+        <div class="login-content">
+            <div class="login-headline">
+                <h1>Log in</h1>
+                <div class="middline-login"></div>
+            </div>
+            <div class="loginfield">
+                <div class="login-input-main-container">
+                    <div class="login-input-container">
+                        <input onkeydown="changeRememberStatus()" class="required" type="email" name="email" id="login-email" placeholder="Email">
+                        <img class="login-img" src="./assets/icon/mail.svg" alt="">
+                    </div>
+                    <div class="errortext" id="email"></div>
+                </div>
+                <div class="login-input-main-container">
+                    <div class="login-input-container">
+                        <input class="required" onkeydown="showVasibilitiyOff('login')" type="password" name="password"
+                            id="login-password" placeholder="Password">
+                        <img class="login-img" id="login-lock" src="./assets/icon/lock.svg" alt="">
+                        <div class="login-button d_none" id="login-visibility">
+                            <button onclick="togglePassword('login-password', 'login')"><img
+                                    src="./assets/icon/visibility.svg" alt=""></button>
+                        </div>
+                        <div class="login-button d_none" id="login-visibility_off" class="d_none">
+                            <button onclick="togglePassword('login-password', 'login')"><img
+                                    src="./assets/icon/visibility_off.svg" alt=""></button>
+                        </div>
+
+                    </div>
+                    <div class="errortext" id="password"></div>
+                    <div class="errortext" id="typemessage"></div>
+                </div>
+
+            </div>
+            <div class="login-buttons-container">
+                <div class="accept-privacy">
+                    <div onclick="changePrivacyCheckbox('login')" id="default-privacy">
+                        <button><img src="./assets/icon/default.svg" alt=""></button>
+                    </div>
+                    <div class="d_none" id="checked-privacy">
+                        <button onclick="changePrivacyCheckbox('login')"><img src="./assets/icon/checked.svg" alt=""></button>
+                    </div>
+
+                    <p>Remember Me</p>
+                </div>
+                <div class="loginbuttons">
+                    <button onclick="validateInputFields('login')" class="btn-dark login-btn-left"
+                        onclick="checkUser()">Log
+                        In</button>
+                    <button onclick="guestLoginValidation()" class="btn-light login-btn-right">Guest Log in</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="joinlogo-overlay screen-animation"></div>
+        <img class="join-logo-welcome-black" id="join-logo-welcome" src="./assets/img/join-logo-black.svg" alt="">
+        <img class="join-logo-welcome" id="join-logo-welcome" src="./assets/img/join-logo-black.svg" alt="">
+        <img class="join-logo-welcome-white" id="join-logo-welcome" src="./assets/img/join-logo-white.svg" alt="">
+        <div class="joinlogo-overlay-black screen-animation"></div>
+        <header>
+            <div class="header-content">
+                <p>Not a Join user?</p>
+                <button onclick="window.location.href='signup.html';" class="btn-dark">Sign Up</button>
+            </div>
+        </header>
+
+
+        <div class="footer">
+            <div class="footer-content">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="legal.html">Legal Notice</a>
+            </div>
+        </div>
+
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <script>w3.includeHTML();</script>
+    </section>
+
+
+</body>
+
+</html>

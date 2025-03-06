@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Notice</title>
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="CSS/sidebar-header.css">
+    <link rel="icon" type="image/x-icon" href="assets/icon/favicon.svg">
+    <link rel="stylesheet" href="CSS/board.css">
+    <link rel="stylesheet" href="CSS/contacts.css">
+    <link rel="stylesheet" href="CSS/summary.css">
+    <link rel="stylesheet" href="CSS/legal-text.css">
+    <script src="JS/data.js"></script>
+    <script src="JS/contacts.js"></script>
+    <script src="JS/template.js"></script>
+    <script src="JS/tasktemplate.js"></script>
+    <script src="JS/subtask-template.js"></script>
+    <script src="JS/dom_manipulations.js"></script>
+    <script src="JS/login.js"></script>
+    <script src="JS/signup.js"></script>
+
+
+</head>
+
+<body onload="legalinit()" class="contact-body">
+
+   
+
+
+    <section class="summary-main-content">
+
+        <section class="placeholder-sidebar sidebar">
+            <div class="sidebar-header">
+                <a href="index.html"><img class="sidebar-logo" src="./assets/img/sidebar-logo.svg" alt=""></a>
+
+                <div class="sidebar-links-container hide d_none">
+                    <a class="sidebar-links" href="summery.html">
+                        <div class="sidebar-svg">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.2273 0.48291H2.77273H2.5C1.39543 0.48291 0.5 1.37864 0.5 2.48321C0.5 2.663 0.5 2.79037 0.5 2.82288V23.2774V23.4829C0.5 24.5875 1.39572 25.4829 2.50029 25.4829C2.64377 25.4829 2.74401 25.4829 2.77272 25.4829H23.2273C23.256 25.4829 23.3562 25.4829 23.4997 25.4829C24.6043 25.4829 25.5 24.587 25.5 23.4824C25.5 23.3756 25.5 23.3017 25.5 23.2774V2.82285C25.5 2.79035 25.5 2.66299 25.5 2.48321C25.5 1.37864 24.6043 0.48291 23.4997 0.48291C23.3562 0.48291 23.256 0.48291 23.2273 0.48291ZM15.2727 23.2774H2.77273V14.1865H15.2727V23.2774ZM15.2727 11.9138H2.77273V2.82288L15.2727 2.82285V11.9138ZM23.2273 23.2774H17.5455V2.82288H23.2273V23.2774Z"
+                                    fill="#CDCDCD" />
+                            </svg>
+                        </div>
+
+                        <p>Summary</p>
+
+                    </a>
+                    <a class="sidebar-links" href="task.html">
+                        <div class="sidebar-svg">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.62652 25.1853C1.95579 25.1853 1.38161 24.9465 0.903963 24.4688C0.426321 23.9912 0.1875 23.417 0.1875 22.7462V5.67308C0.1875 5.00235 0.426321 4.42816 0.903963 3.95052C1.38161 3.47287 1.95579 3.23405 2.62652 3.23405H13.5107L11.0716 5.67308H2.62652V22.7462H19.6997V14.2706L22.1387 11.8316V22.7462C22.1387 23.417 21.8999 23.9912 21.4223 24.4688C20.9446 24.9465 20.3704 25.1853 19.6997 25.1853H2.62652ZM16.2546 3.93527L17.9924 5.64259L9.9436 13.6914V15.4292H11.6509L19.7302 7.34991L21.468 9.05722L13.3887 17.1365C13.1651 17.3601 12.906 17.5379 12.6113 17.67C12.3166 17.8021 12.0066 17.8682 11.6814 17.8682H8.72409C8.37856 17.8682 8.08892 17.7513 7.85518 17.5176C7.62144 17.2839 7.50457 16.9942 7.50457 16.6487V13.6914C7.50457 13.3662 7.56555 13.0562 7.6875 12.7615C7.80945 12.4668 7.98222 12.2076 8.20579 11.9841L16.2546 3.93527ZM21.468 9.05722L16.2546 3.93527L19.3034 0.886492C19.7912 0.398688 20.3755 0.154785 21.0564 0.154785C21.7373 0.154785 22.3115 0.398688 22.779 0.886492L24.4863 2.6243C24.9538 3.09178 25.1875 3.66088 25.1875 4.33161C25.1875 5.00235 24.9538 5.57145 24.4863 6.03893L21.468 9.05722Z"
+                                    fill="#CDCDCD" />
+                            </svg>
+                        </div>
+                        <p>Add Task</p>
+                    </a>
+                    <a class="sidebar-links" href="board.html">
+                        <div class="sidebar-svg">
+                            <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.9529 2.75564L22.9529 23.21C22.9523 23.8125 22.7126 24.3903 22.2865 24.8163C21.8605 25.2424 21.2827 25.4821 20.6802 25.4827L16.1348 25.4827C15.5322 25.4821 14.9545 25.2424 14.5284 24.8163C14.1023 24.3903 13.8627 23.8125 13.8621 23.21L13.8621 2.75564C13.8627 2.15306 14.1023 1.57534 14.5284 1.14926C14.9545 0.723172 15.5322 0.483533 16.1348 0.48293L20.6802 0.48293C21.2827 0.483533 21.8605 0.723172 22.2865 1.14926C22.7126 1.57534 22.9523 2.15306 22.9529 2.75564ZM16.1348 23.21L20.6802 23.21L20.6802 2.75564L16.1348 2.75564L16.1348 23.21ZM16.1348 2.75564L16.1348 23.21C16.1342 23.8125 15.8945 24.3902 15.4684 24.8163C15.0423 25.2424 14.4646 25.482 13.8621 25.4826L9.31664 25.4826C8.71407 25.482 8.13635 25.2424 7.71026 24.8163C7.28418 24.3902 7.04454 23.8125 7.04394 23.2099L7.04394 2.75561C7.04454 2.15304 7.28418 1.57532 7.71026 1.14923C8.13635 0.723148 8.71407 0.483513 9.31664 0.48291L13.862 0.48291C14.4646 0.483512 15.0423 0.723148 15.4684 1.14923C15.8945 1.57532 16.1342 2.15306 16.1348 2.75564ZM9.31664 23.2099L13.8621 23.21L13.8621 2.75564L9.31664 2.75561L9.31664 23.2099ZM9.31664 2.75561L9.31664 23.2099C9.31604 23.8125 9.0764 24.3902 8.65032 24.8163C8.22424 25.2424 7.64651 25.482 7.04394 25.4826L2.49853 25.4826C1.89596 25.482 1.31824 25.2424 0.892154 24.8163C0.46607 24.3902 0.226432 23.8125 0.22583 23.2099L0.225829 2.75561C0.226431 2.15304 0.466069 1.57532 0.892153 1.14923C1.31824 0.723148 1.89596 0.483513 2.49853 0.48291L7.04394 0.48291C7.64651 0.483513 8.22423 0.723148 8.65032 1.14923C9.0764 1.57532 9.31604 2.15304 9.31664 2.75561ZM2.49853 23.2099L7.04394 23.2099L7.04394 2.75561L2.49853 2.75561L2.49853 23.2099Z"
+                                    fill="#CDCDCD" />
+                                <path
+                                    d="M29.771 2.75589L29.771 23.2102C29.7704 23.8128 29.5307 24.3905 29.1046 24.8166C28.6786 25.2427 28.1008 25.4823 27.4983 25.4829L22.9529 25.4829C22.3503 25.4823 21.7726 25.2427 21.3465 24.8166C20.9204 24.3905 20.6808 23.8125 20.6802 23.21L20.6802 2.75564C20.6808 2.15306 20.9204 1.57559 21.3465 1.14951C21.7726 0.723424 22.3503 0.483787 22.9529 0.483184L27.4983 0.483184C28.1008 0.483786 28.6786 0.723424 29.1046 1.14951C29.5307 1.57559 29.7704 2.15331 29.771 2.75589ZM22.9529 23.21L27.4983 23.2102L27.4983 2.75589L22.9529 2.75564L22.9529 23.21Z"
+                                    fill="#CDCDCD" />
+                            </svg>
+                        </div>
+                        <p>Board</p>
+                    </a>
+                    <a class="sidebar-links" href="contacts.html">
+                        <div class="sidebar-svg">
+                            <svg width="24" height="26" viewBox="0 0 24 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 20.4829C10.8333 20.4829 9.71875 20.6652 8.65625 21.0298C7.59375 21.3944 6.625 21.9412 5.75 22.6704V22.9829H18.25V22.6704C17.375 21.9412 16.4062 21.3944 15.3438 21.0298C14.2812 20.6652 13.1667 20.4829 12 20.4829ZM3.25 21.5454C4.375 20.4412 5.68229 19.5715 7.17188 18.936C8.66146 18.3006 10.2708 17.9829 12 17.9829C13.7292 17.9829 15.3385 18.3006 16.8281 18.936C18.3177 19.5715 19.625 20.4412 20.75 21.5454V5.48291H3.25V21.5454ZM12 15.4829C10.7917 15.4829 9.76042 15.0558 8.90625 14.2017C8.05208 13.3475 7.625 12.3162 7.625 11.1079C7.625 9.89958 8.05208 8.86833 8.90625 8.01416C9.76042 7.15999 10.7917 6.73291 12 6.73291C13.2083 6.73291 14.2396 7.15999 15.0938 8.01416C15.9479 8.86833 16.375 9.89958 16.375 11.1079C16.375 12.3162 15.9479 13.3475 15.0938 14.2017C14.2396 15.0558 13.2083 15.4829 12 15.4829ZM12 12.9829C12.5208 12.9829 12.9635 12.8006 13.3281 12.436C13.6927 12.0715 13.875 11.6287 13.875 11.1079C13.875 10.5871 13.6927 10.1444 13.3281 9.77979C12.9635 9.4152 12.5208 9.23291 12 9.23291C11.4792 9.23291 11.0365 9.4152 10.6719 9.77979C10.3073 10.1444 10.125 10.5871 10.125 11.1079C10.125 11.6287 10.3073 12.0715 10.6719 12.436C11.0365 12.8006 11.4792 12.9829 12 12.9829ZM3.25 25.4829C2.5625 25.4829 1.97396 25.2381 1.48438 24.7485C0.994792 24.259 0.75 23.6704 0.75 22.9829V5.48291C0.75 4.79541 0.994792 4.20687 1.48438 3.71729C1.97396 3.2277 2.5625 2.98291 3.25 2.98291H4.5V0.48291H7V2.98291H17V0.48291H19.5V2.98291H20.75C21.4375 2.98291 22.026 3.2277 22.5156 3.71729C23.0052 4.20687 23.25 4.79541 23.25 5.48291V22.9829C23.25 23.6704 23.0052 24.259 22.5156 24.7485C22.026 25.2381 21.4375 25.4829 20.75 25.4829H3.25Z"
+                                    fill="#CDCDCD" />
+                            </svg>
+                        </div>
+                        <p>Contacts</p>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-legal-links-container">
+                <div class="sidebar-legal-links">
+                    <a href="privacy.html">Privacy Police</a>
+                    <a href="legal.html">Legal Notice</a>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section class="content-right">
+            <header class="header">
+                <p class="header-text">Kanban Project Management Tool</p>
+               <a href="index.html"><img class="header-join-logo" src="./assets/img/logo-dark.png" alt=""></a>
+
+                <div class="header-right hide d_none">
+
+                    <a class="help" href="help.html"><img src="./assets/icon/help.svg" alt=""></a>
+
+                    <div onclick="slideLogout()" class="header-user-icon" id="header-initials">G</div>
+                </div>
+            </header>
+            <div class="help-content">
+
+                <div class="header-legal-text">
+                    <h1>Legal Notice</h1>
+                    <a href="javascript:window.history.back()">
+                        <img src="./assets/icon/back.png" alt="Back">
+                    </a>
+                </div>
+                <div class="legal-text">
+                    <h2 class="h2-legal">Imprint</h2>
+                    <ul>
+                        <li>Rahmi Esen, Baris Sefer, Johannes Roth</li>
+                        <li>Musterstraße 1</li>
+                        <li>54321 Musterdorf</li>
+                    </ul>
+                    <h2>Exploring the Board</h2>
+                    <p>Email: <a class="a-legal" href="beispiel@beispieldomain.de">beispiel@beispieldomain.de</a></p>
+                    <h2>Acceptance of terms</h2>
+                    <p>By accessing and using <a class="a-legal">Join</a> (Product), you acknowledge and agree to the
+                        following
+                        terms and conditions, and any policies, guidelines, or amendments thereto that may be presented
+                        to you
+                        from time to time. We, the listed students, may update or change the terms and conditions from
+                        time to
+                        time without notice.</p>
+                    <h2>Scope and ownership of the product</h2>
+                    <p><a class="a-legal">Join</a> has been developed as part of a student group project in a web
+                        development bootcamp at the <a class="a-legal" href="https://developerakademie.com/">Developer
+                            Akademie GmbH</a>. It
+                        has an educational purpose and is not intended for extensive personal and business usage. As
+                        such, we
+                        cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality
+                        regarding
+                        this product.<br><br>The design of <a class="a-legal">Join</a> is owned by the <a
+                            class="a-legal" href="https://developerakademie.com/">Developer Akademie GmbH</a>.
+                        Unauthorized use, reproduction, modification, distribution, or replication of the design is
+                        strictly
+                        prohibited.</p>
+                    <h2>Proprietary rights</h2>
+                    <p>Aside from the design owned by <a class="a-legal" href="https://developerakademie.com/">Developer
+                            Akademie GmbH</a>, we,
+                        the students, retain all proprietary rights in <a class="a-legal">Join</a>, including any
+                        associated
+                        copyrighted material, trademarks, and other proprietary information.</p>
+                    <h2>Use of the product</h2>
+                    <p><a class="a-legal">Join</a> is intended to be used for lawful purposes only, in accordance with
+                        all
+                        applicable laws and regulations. Any use of <a class="a-legal">Join</a> for illegal interactions
+                        with other
+                        users of <a class="a-legal">Join</a>.</p>
+                    <h2>Disclaimer of warranties and limitation of liability</h2>
+                    <p><a class="a-legal">Join</a> is provided "as is" without warranty of any kind, whether express or
+                        implied,
+                        including but not limited to the implied warranties of merchantability, fitness for a particular
+                        purpose, and
+                        non-infringement. In no event will we, the listed students, or the <a class="a-legal"
+                            href="https://developerakademie.com/">Developer Akademie</a>,
+                        be liable for any direct, indirect, incidental, special, consequential or exemplary damages,
+                        including
+                        but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses,
+                        even if we
+                        have been advised of the possibility of such damages, arising out of or in connection with the
+                        use or
+                        performance of <a class="a-legal">Join</a>.</p>
+                    <h2>Indemnity</h2>
+                    <p>You agree to indemnify, defend and hold harmless us, the listed students, the <a class="a-legal"
+                            href="https://developerakademie.com/">Developer Akademie</a>,
+                        and our affiliate partners, officers, directors, agents, and employees, from and against any
+                        claim, demand,
+                        loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to
+                        your
+                        use of <a class="a-legal">Join</a> and/or your breach of this Legal Notice.</p><br>
+                    <p>For any questions or notices, please contact us at <a class="a-legal"
+                            href="mailto:beispiel@beispieldomain.de">beispiel@beispieldomain.de</a>.</p><br>
+                    <p class="legal-text-date">Date: November 26, 2024</p>
+                </div>
+
+
+
+            </div>
+            <footer class="hide d_none">
+                <div class="footer-links-container">
+                    <a class="footer-links" href="summery.html">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.2273 0.48291H2.77273H2.5C1.39543 0.48291 0.5 1.37864 0.5 2.48321C0.5 2.663 0.5 2.79037 0.5 2.82288V23.2774V23.4829C0.5 24.5875 1.39572 25.4829 2.50029 25.4829C2.64377 25.4829 2.74401 25.4829 2.77272 25.4829H23.2273C23.256 25.4829 23.3562 25.4829 23.4997 25.4829C24.6043 25.4829 25.5 24.587 25.5 23.4824C25.5 23.3756 25.5 23.3017 25.5 23.2774V2.82285C25.5 2.79035 25.5 2.66299 25.5 2.48321C25.5 1.37864 24.6043 0.48291 23.4997 0.48291C23.3562 0.48291 23.256 0.48291 23.2273 0.48291ZM15.2727 23.2774H2.77273V14.1865H15.2727V23.2774ZM15.2727 11.9138H2.77273V2.82288L15.2727 2.82285V11.9138ZM23.2273 23.2774H17.5455V2.82288H23.2273V23.2774Z"
+                                fill="#CDCDCD" />
+                        </svg>
+                        <p>Summary</p>
+                    </a>
+                    <a class="footer-links" href="board.html">
+                        <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22.9529 2.75564L22.9529 23.21C22.9523 23.8125 22.7126 24.3903 22.2865 24.8163C21.8605 25.2424 21.2827 25.4821 20.6802 25.4827L16.1348 25.4827C15.5322 25.4821 14.9545 25.2424 14.5284 24.8163C14.1023 24.3903 13.8627 23.8125 13.8621 23.21L13.8621 2.75564C13.8627 2.15306 14.1023 1.57534 14.5284 1.14926C14.9545 0.723172 15.5322 0.483533 16.1348 0.48293L20.6802 0.48293C21.2827 0.483533 21.8605 0.723172 22.2865 1.14926C22.7126 1.57534 22.9523 2.15306 22.9529 2.75564ZM16.1348 23.21L20.6802 23.21L20.6802 2.75564L16.1348 2.75564L16.1348 23.21ZM16.1348 2.75564L16.1348 23.21C16.1342 23.8125 15.8945 24.3902 15.4684 24.8163C15.0423 25.2424 14.4646 25.482 13.8621 25.4826L9.31664 25.4826C8.71407 25.482 8.13635 25.2424 7.71026 24.8163C7.28418 24.3902 7.04454 23.8125 7.04394 23.2099L7.04394 2.75561C7.04454 2.15304 7.28418 1.57532 7.71026 1.14923C8.13635 0.723148 8.71407 0.483513 9.31664 0.48291L13.862 0.48291C14.4646 0.483512 15.0423 0.723148 15.4684 1.14923C15.8945 1.57532 16.1342 2.15306 16.1348 2.75564ZM9.31664 23.2099L13.8621 23.21L13.8621 2.75564L9.31664 2.75561L9.31664 23.2099ZM9.31664 2.75561L9.31664 23.2099C9.31604 23.8125 9.0764 24.3902 8.65032 24.8163C8.22424 25.2424 7.64651 25.482 7.04394 25.4826L2.49853 25.4826C1.89596 25.482 1.31824 25.2424 0.892154 24.8163C0.46607 24.3902 0.226432 23.8125 0.22583 23.2099L0.225829 2.75561C0.226431 2.15304 0.466069 1.57532 0.892153 1.14923C1.31824 0.723148 1.89596 0.483513 2.49853 0.48291L7.04394 0.48291C7.64651 0.483513 8.22423 0.723148 8.65032 1.14923C9.0764 1.57532 9.31604 2.15304 9.31664 2.75561ZM2.49853 23.2099L7.04394 23.2099L7.04394 2.75561L2.49853 2.75561L2.49853 23.2099Z"
+                                fill="#CDCDCD" />
+                            <path
+                                d="M29.771 2.75589L29.771 23.2102C29.7704 23.8128 29.5307 24.3905 29.1046 24.8166C28.6786 25.2427 28.1008 25.4823 27.4983 25.4829L22.9529 25.4829C22.3503 25.4823 21.7726 25.2427 21.3465 24.8166C20.9204 24.3905 20.6808 23.8125 20.6802 23.21L20.6802 2.75564C20.6808 2.15306 20.9204 1.57559 21.3465 1.14951C21.7726 0.723424 22.3503 0.483787 22.9529 0.483184L27.4983 0.483184C28.1008 0.483786 28.6786 0.723424 29.1046 1.14951C29.5307 1.57559 29.7704 2.15331 29.771 2.75589ZM22.9529 23.21L27.4983 23.2102L27.4983 2.75589L22.9529 2.75564L22.9529 23.21Z"
+                                fill="#CDCDCD" />
+                        </svg>
+                        <p>Board</p>
+                    </a>
+                    <a class="footer-links" href="task.html">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.62652 25.1853C1.95579 25.1853 1.38161 24.9465 0.903963 24.4688C0.426321 23.9912 0.1875 23.417 0.1875 22.7462V5.67308C0.1875 5.00235 0.426321 4.42816 0.903963 3.95052C1.38161 3.47287 1.95579 3.23405 2.62652 3.23405H13.5107L11.0716 5.67308H2.62652V22.7462H19.6997V14.2706L22.1387 11.8316V22.7462C22.1387 23.417 21.8999 23.9912 21.4223 24.4688C20.9446 24.9465 20.3704 25.1853 19.6997 25.1853H2.62652ZM16.2546 3.93527L17.9924 5.64259L9.9436 13.6914V15.4292H11.6509L19.7302 7.34991L21.468 9.05722L13.3887 17.1365C13.1651 17.3601 12.906 17.5379 12.6113 17.67C12.3166 17.8021 12.0066 17.8682 11.6814 17.8682H8.72409C8.37856 17.8682 8.08892 17.7513 7.85518 17.5176C7.62144 17.2839 7.50457 16.9942 7.50457 16.6487V13.6914C7.50457 13.3662 7.56555 13.0562 7.6875 12.7615C7.80945 12.4668 7.98222 12.2076 8.20579 11.9841L16.2546 3.93527ZM21.468 9.05722L16.2546 3.93527L19.3034 0.886492C19.7912 0.398688 20.3755 0.154785 21.0564 0.154785C21.7373 0.154785 22.3115 0.398688 22.779 0.886492L24.4863 2.6243C24.9538 3.09178 25.1875 3.66088 25.1875 4.33161C25.1875 5.00235 24.9538 5.57145 24.4863 6.03893L21.468 9.05722Z"
+                                fill="#CDCDCD" />
+                        </svg>
+
+                        <p>Add Task</p>
+                    </a>
+                    <a class="footer-links" href="contacts.html">
+                        <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 20.4829C10.8333 20.4829 9.71875 20.6652 8.65625 21.0298C7.59375 21.3944 6.625 21.9412 5.75 22.6704V22.9829H18.25V22.6704C17.375 21.9412 16.4062 21.3944 15.3438 21.0298C14.2812 20.6652 13.1667 20.4829 12 20.4829ZM3.25 21.5454C4.375 20.4412 5.68229 19.5715 7.17188 18.936C8.66146 18.3006 10.2708 17.9829 12 17.9829C13.7292 17.9829 15.3385 18.3006 16.8281 18.936C18.3177 19.5715 19.625 20.4412 20.75 21.5454V5.48291H3.25V21.5454ZM12 15.4829C10.7917 15.4829 9.76042 15.0558 8.90625 14.2017C8.05208 13.3475 7.625 12.3162 7.625 11.1079C7.625 9.89958 8.05208 8.86833 8.90625 8.01416C9.76042 7.15999 10.7917 6.73291 12 6.73291C13.2083 6.73291 14.2396 7.15999 15.0938 8.01416C15.9479 8.86833 16.375 9.89958 16.375 11.1079C16.375 12.3162 15.9479 13.3475 15.0938 14.2017C14.2396 15.0558 13.2083 15.4829 12 15.4829ZM12 12.9829C12.5208 12.9829 12.9635 12.8006 13.3281 12.436C13.6927 12.0715 13.875 11.6287 13.875 11.1079C13.875 10.5871 13.6927 10.1444 13.3281 9.77979C12.9635 9.4152 12.5208 9.23291 12 9.23291C11.4792 9.23291 11.0365 9.4152 10.6719 9.77979C10.3073 10.1444 10.125 10.5871 10.125 11.1079C10.125 11.6287 10.3073 12.0715 10.6719 12.436C11.0365 12.8006 11.4792 12.9829 12 12.9829ZM3.25 25.4829C2.5625 25.4829 1.97396 25.2381 1.48438 24.7485C0.994792 24.259 0.75 23.6704 0.75 22.9829V5.48291C0.75 4.79541 0.994792 4.20687 1.48438 3.71729C1.97396 3.2277 2.5625 2.98291 3.25 2.98291H4.5V0.48291H7V2.98291H17V0.48291H19.5V2.98291H20.75C21.4375 2.98291 22.026 3.2277 22.5156 3.71729C23.0052 4.20687 23.25 4.79541 23.25 5.48291V22.9829C23.25 23.6704 23.0052 24.259 22.5156 24.7485C22.026 25.2381 21.4375 25.4829 20.75 25.4829H3.25Z"
+                                fill="#CDCDCD" />
+                        </svg>
+
+                        <p>Contacts</p>
+                    </a>
+                </div>
+
+
+            </footer>
+        </section>
+
+    </section>
+    <div id="logout" class="logout slideouthelp">
+        <div class="logout-links">
+            <a class="help-slide" href="help.html">Help</a>
+            <a href="legal.html">Legal Notice</a>
+            <a href="privacy.html">Pravicy Policy</a>
+            <a onclick="logoutUser()">Logout</a>
+        </div>
+    </div>
+</body>
+
+</html>

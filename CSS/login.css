@@ -1,0 +1,474 @@
+.login-body {
+    position: relative;
+    z-index: -1;
+}
+
+.error {
+    border-color: red;
+}
+
+.errortext {
+    font-size: 12px;
+    color: red;
+    padding-left: 10px;
+}
+
+.main-content-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 118px;
+    padding-right: 122px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 279px;
+    height: 49px;
+    gap: 35px;
+}
+
+.header-content button {
+    padding: 0;
+    width: 91px;
+    height: 49px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.header-content p {
+    width: 153px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 32px 10px;
+    gap: 8px;
+    width: 90%;
+    max-width: 652px;
+    height: 449px;
+    border: none;
+    box-shadow: 0px 0px 14px 3px var(--border);
+    border-radius: 30px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.middline-login {
+    width: 150px;
+    border: solid;
+    border-color: var(--highlight);
+}
+
+.login-headline {
+    width: 315px;
+    height: 89px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.loginbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 322px;
+    height: 48px;
+    gap: 35px;
+    font-size: 8px;
+}
+
+.loginfield {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 422px;
+    height: 152px;
+    gap: 20px;
+}
+
+.login-btn-left {
+    font-size: 21px;
+    width: 110px;
+    height: 48px;
+    padding: 0;
+}
+
+.login-btn-right {
+    font-size: 21px;
+    width: 177px;
+    height: 48px;
+    padding: 0;
+}
+
+.login-input-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-input-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.login-input-container input {
+    max-width: 100%;
+}
+
+.login-button {
+    position: absolute;
+    right: 21px;
+    width: fit-content;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.login-button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 21px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.login-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.login-img {
+    position: absolute;
+    right: 21px;
+    width: 24px;
+    height: 24px;
+}
+
+.joinlogo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+.joinlogo-overlay-black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    z-index: 999;
+    background-color: var(--main-color);
+}
+
+.join-logo-welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    animation-name: logo-animation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-delay: 500ms;
+    opacity: 0;
+}
+
+.join-logo-welcome-white {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    animation-name: white-logo-animation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-delay: 500ms;
+}
+
+.join-logo-welcome-black {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    animation-name: black-logo-animation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-delay: 500ms;
+}
+
+.screen-animation {
+    opacity: 1;
+    animation-name: screen-animation;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-delay: 700ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo-animation {
+    0% {
+        width: 274px;
+        height: 334px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    100% {
+        top: 10px;
+        left: 10px;
+        width: 50px;
+        height: 60px;
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes screen-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 100px;
+        height: 121px;
+        opacity: 0;
+    }
+}
+
+@keyframes white-logo-animation {
+    0% {
+        width: 274px;
+        height: 334px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        display: none;
+    }
+
+    100% {
+        top: 80px;
+        left: 77px;
+        width: 50px;
+        height: 60px;
+        transform: none;
+        opacity: 0;
+    }
+}
+
+@keyframes black-logo-animation {
+    0% {
+        width: 274px;
+        height: 334px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        top: 80px;
+        left: 77px;
+        width: 110px;
+        height: 121px;
+        transform: none;
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 246px;
+    height: 35px;
+}
+
+.footer-content a {
+    color: var(--footer-text);
+}
+
+.footer-content a:hover {
+    font-weight: 800;
+    color: var(--highlight);
+}
+
+@media(max-width: 890px) {
+    .main-content-login {
+        justify-content: flex-end;
+    }
+
+    header {
+        width: 100%;
+        position: absolute;
+        bottom: 100px;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .header-content {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media(min-width: 1060px) {
+    .join-logo-welcome-white {
+        display: none;
+    }
+
+    .joinlogo-overlay-black {
+        display: none;
+    }
+
+    .join-logo-welcome {
+        display: none;
+    }
+}
+
+@media(max-width: 1060px) {
+    .join-logo-welcome {
+        width: 50px;
+        height: 60px;
+    }
+
+    .join-logo-welcome-black {
+        display: none;
+    }
+}
+
+@media(max-width: 480px) {
+    .loginbuttons {
+        flex-direction: column;
+        gap: 21px;
+        height: 180px;
+    }
+
+    .login-content {
+        height: 475px;
+    }
+
+    .login-headline h1 {
+        font-size: 47px;
+    }
+
+    .middline-login {
+        width: 88px;
+    }
+}
+
+@media(max-height: 850px) {
+    .login-content {
+        max-height: 400px;
+        gap: 4px;
+        position: absolute;
+        top: 45%;
+    }
+
+    .login-content input {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .login-content button {
+
+        height: 40px;
+        font-size: 16px;
+    }
+
+   
+
+    header {
+        position: absolute;
+        bottom: 80px;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        height: fit-content;
+    }
+
+    .login-buttons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        max-height: 100px;
+
+    }
+    .main-content-login {
+        justify-content: flex-end;
+    }
+}
+
+@media(max-height: 700px) {
+
+    header {
+        position: absolute;
+        bottom: 80px;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    footer {
+
+        position: absolute;
+        bottom: 0;
+    }
+
+  
+
+}

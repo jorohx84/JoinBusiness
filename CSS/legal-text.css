@@ -1,0 +1,99 @@
+main {
+position: relative;
+    overflow-x: hidden;
+}
+
+a {
+    z-index: 100;
+    cursor: pointer;
+}
+
+ul {
+    padding-top: 16px;
+    padding-left: 30px;
+}
+
+.header-legal-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1014px;
+    margin-bottom: 50px;
+    width: -webkit-fill-available;
+}
+
+.help-content{
+padding: 0 30px;
+    margin-top: 40px;
+    overflow-y: scroll;
+    max-height: calc(100vh) ;
+}
+
+.help-content h2{
+
+    margin-bottom: 10px !important;
+}
+.help-content h3{
+
+    margin-bottom: 10px !important;
+}
+
+.legal-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 1014px;
+    width: -webkit-fill-available;
+    height: 943px;
+    gap: 16px;
+}
+
+.legal-text p {
+    font-size: 16px;
+    color: #000;
+}
+
+.legal-text h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: -16px;
+}
+
+.legal-text-date {
+    padding-bottom: 45px;
+}
+
+.user-info-wrapper {
+    display: none;
+}
+
+.custom-list li {
+    padding-left: 35px;
+}
+
+.custom-list li::marker {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.custom-list {
+    padding-left: 39px;
+}
+
+@media (max-width: 992px) {
+    main {
+        padding: 32px 18px 0 18px !important;
+    }
+
+    h1{
+
+        font-size: 47px;
+    }
+}
+
+@media (max-width: 500px) {
+
+p{
+
+    font-size: 16px;
+}
+}
