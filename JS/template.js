@@ -225,7 +225,7 @@ function getContactDataTemplate(contactIndex) {
  */
 function getTaskCardTemplate(arrayKey, indexKey, TASK) {
     return `
- <div onclick="openTaskCard(); renderTaskCardOverlay('${arrayKey}', ${indexKey}, 'over')" draggable="true" ondragstart="startDragging(${TASK['id']})"  class="task-card" id="draggable">
+ <div onclick="openTaskCard(); renderTaskCardOverlay('${arrayKey}', ${indexKey}, 'over')" draggable="true" ondragstart="startDragging('${TASK['id']}')"  class="task-card" id="draggable">
                       <div id="movetobuttons-${arrayKey}${indexKey}" class="d_none">
     
                            <div class="movetobuttons">

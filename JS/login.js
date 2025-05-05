@@ -100,11 +100,11 @@ function getUserBase(currentUser) {
  */
 function saveToLocalStorage(userBase, currentUser, saveUser, checkKey) {
     if (checkKey === 'login') {
-        localStorage.setItem('saveUser', saveUser);
-        localStorage.setItem('userBase', userBase);
+        localStorage.setItem('saveUser', JSON.stringify (saveUser));
+        localStorage.setItem('userBase',JSON.stringify (userBase));
         return
     } else {
-        localStorage.setItem('userBase', userBase);
+        localStorage.setItem('userBase',JSON.stringify (userBase));
         if (userBase !== 0 && currentUser) {
             localStorage.setItem('currentUser', JSON.stringify(currentUser));
         }

@@ -1025,6 +1025,7 @@
     .task-column {
         position: relative;
         width: 100%;
+        min-height: fit-content !important;
         max-height: fit-content !important;
         overflow-x: scroll;
     }
@@ -1109,7 +1110,7 @@
 
 
     .column-maincontainer {
-        max-height: calc(100vh - 410px);
+        max-height: calc(100vh - 440px);
     }
 
     .taskoverlay-content h1 {
@@ -1140,12 +1141,7 @@
     }
 }
 
-@media (max-width: 1024px) {
-    .column-maincontainer {
-        max-height: calc(100vh - 330px);
-    }
 
-}
 
 @media (max-width: 992px) {
     .task-create-overlay {
@@ -1275,7 +1271,7 @@
 @media (max-height: 750px) {
     .column-maincontainer {
         margin-top: 0;
-        max-height: calc(100vh - 278px);
+        
 
     }
     .board-headline{
@@ -1323,10 +1319,13 @@
 @media (max-height: 1000px) {
     .task-card-overlay-content {
         max-height: 90vh;
+        margin-top: 10px;
     }
 
     .task-card-overlay {
         position: absolute;
+        align-items: flex-start;
+     
         padding: 0 10px;
         top: 0;
         width: 100vw;

@@ -5,7 +5,7 @@ let idNumber = 1;
 let contactIdNumber = 1;
 let userBase;
 
-const BASE_URL = "https://join-3a5f3-default-rtdb.europe-west1.firebasedatabase.app/";
+const BASE_URL = "https://joinbusiness-55ec9-default-rtdb.europe-west1.firebasedatabase.app/";
 
 
 /**
@@ -48,19 +48,30 @@ async function postData(path = "", data) {
     return responseToJson = await response.json();
 }
 
+function generateFirestoreID() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    const charactersLength = characters.length;
+    for (let i = 0; i < 28; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
 
 /**
  * create an new user and post it to firebase
  */
 async function addUser() {
-    const useridResponse = await loadData(`userIdNumber`);    
-    let userID = useridResponse && useridResponse.userIdNumber ? useridResponse.userIdNumber : 1;
+    // const useridResponse = await loadData(`userIdNumber`);    
+    // let userID = useridResponse && useridResponse.userIdNumber ? useridResponse.userIdNumber : 1;
+    const userID = generateFirestoreID();
     const user = createUserObject(userID);
     await putData(`users/${userID}`, user);
     await loadData();
-    userID++;
-    const newUserID = { userIdNumber: userID };
-    await putData('userIdNumber', newUserID)
+    // userID++;
+    // const newUserID = { userIdNumber: userID };
+    // await putData('userIdNumber', newUserID)
     pushToArray(responseToJson.users, 'allUsers');
 }
 
@@ -92,14 +103,15 @@ function createUserObject(userID) {
  * create a new contact an post it in firebase
  */
 async function addContact() {
-    const contactidResponse = await loadData(`contactIdNumber`);
-    let contactID = contactidResponse && contactidResponse.contactIdNumber !== undefined ? contactidResponse.contactIdNumber : 1;
+    // const contactidResponse = await loadData(`contactIdNumber`);
+    // let contactID = contactidResponse && contactidResponse.contactIdNumber !== undefined ? contactidResponse.contactIdNumber : 1;
+    const contactID = generateFirestoreID();
     const contact = createContactObject(contactID);
     await putData(`contacts/${contactID}`, contact);
     await loadData();
-    contactID++;
-    const newContactID = { contactIdNumber: contactID };
-    await putData(`contactIdNumber`, newContactID);
+    // contactID++;
+    // const newContactID = { contactIdNumber: contactID };
+    // await putData(`contactIdNumber`, newContactID);
     pushToArray(responseToJson.contacts, 'allContacts');
     renderContacts();
 }
@@ -160,14 +172,15 @@ function getRandomColor() {
  * @param {string} idKey -get the current ID of object in template
  */
 async function addTask(arrayKey, idKey) {
-    const idResponse = await loadData(`taskIdNumber`);
-    let currentId = idResponse && idResponse.taskIdNumber ? idResponse.taskIdNumber : 1;
-    const task = createTaskObject(currentId, idKey, arrayKey);
-    await putData(`tasks/${currentId}`, task);
+    // const idResponse = await loadData(`taskIdNumber`);
+    // let currentId = idResponse && idResponse.taskIdNumber ? idResponse.taskIdNumber : 1;
+    const currentID = generateFirestoreID();
+    const task = createTaskObject(currentID, idKey, arrayKey);
+    await putData(`tasks/${currentID}`, task);
     await loadData();
-    currentId++;
-    const newIdData = { taskIdNumber: currentId };
-    await putData(`taskIdNumber`, newIdData);
+    // currentId++;
+    // const newIdData = { taskIdNumber: currentId };
+    // await putData(`taskIdNumber`, newIdData);
     pushToArray(responseToJson.tasks, 'allTasks')
     checkNextStep(arrayKey);
 }
@@ -200,7 +213,8 @@ function createTaskObject(currentId, idKey, arrayKey) {
         'taskID': arrayKey,
         'subtasks': sub,
         'assignedto': assign,
-        'firebaseID': currentId
+        'firebaseID': currentId,
+        'lastEdit':new Date().toISOString(),
     }
 }
 

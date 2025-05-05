@@ -29,7 +29,10 @@ function renderTaskPlaceholder() {
  * @param {number} id -this is the ID-Number of the current dragged Task
  */
 function startDragging(id) {
+
     currentDraggedElement = id;
+    console.log(currentDraggedElement);
+
 }
 
 
@@ -43,29 +46,11 @@ async function moveTo(category) {
     const task = allTasks.find(task => task.id === currentDraggedElement);
     if (category === task.taskID) { return }
     if (task) {
-        await getNewIdToTask(task, category);
+        task.taskID = category;
+        task.lastEdit = new Date().toISOString();
         await updateTasks(task);
         getAllTemplates();
     }
-}
-
-
-/**
- * after every drag move, the task get a new id
- * 
- * @param {object} task - the current dragged Task
- * @param {string} category - This is the category of the target element into which the task should be moved
- * @returns -returns the current ID of the Task after dragging
- */
-async function getNewIdToTask(task, category) {
-    const idResponse = await loadData('idNumber');
-    let currentId = idResponse && idResponse.idNumber ? idResponse.idNumber : 1;
-    task.id = currentId;
-    task.taskID = category;
-    currentId++;
-    const newIdData = { idNumber: currentId };
-    await putData('idNumber', newIdData);
-    return currentId;
 }
 
 
@@ -79,7 +64,7 @@ async function updateTasks(currentTask) {
     await putData(`tasks/${TASKID}`, currentTask);
     await loadData();
     pushToArray(responseToJson.tasks, 'allTasks');
-    allTasks.sort((a, b) => a.id - b.id);
+    allTasks.sort((a, b) => new Date(a.lastEdit) - new Date(b.lastEdit));
 }
 
 
@@ -136,7 +121,12 @@ function giveHighlight(arrayKey) {
     removeAllHighlights();
     let highlightContentRef = document.getElementById(`dragover-placeholder-${arrayKey}`);
     let placeholderRef = document.getElementById(`column-content-placeholder-${arrayKey}`);
+    console.log(allTasks);
+    console.log(currentDraggedElement);
+
     const task = allTasks.find(task => task.id === currentDraggedElement);
+
+
     if (task.taskID === arrayKey) {
         return
     } else {
