@@ -5,7 +5,7 @@ let idNumber = 1;
 let contactIdNumber = 1;
 let userBase;
 
-const BASE_URL = "https://joinbusiness-55ec9-default-rtdb.europe-west1.firebasedatabase.app/";
+const BASE_URL = "https://join-183d9-default-rtdb.europe-west1.firebasedatabase.app/";
 
 
 /**
